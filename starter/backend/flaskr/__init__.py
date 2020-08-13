@@ -151,8 +151,7 @@ of the questions list in the "List" tab.
         if ((request.json.get('question') == '') | (request.json.get('answer') == '') | (
                 request.json.get('difficulty') == '') | (request.json.get('category') == '')):
             return abort(422)
-        if (not request.json.get('question').isalpha() )| (not request.json.get('answer').isalpha()):
-            return abort(422)
+
         try:
             new_question = Question(
                 question=request.json.get('question'),

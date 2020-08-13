@@ -115,25 +115,12 @@ class TriviaTestCase(unittest.TestCase):
 
 
 
-    def test_play(self):
-        """Testing Play quiz method, takes previous question and category , this test should check for previous questions and retrieve random it will return the question and success"""
-
-        res = self.client().post('/quizzes?category=1',json=self.quiz_category)
-        data = json.loads(res.data)
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(data['success'], True)
-        self.assertTrue(data['question'])
-
-
-
-
-
     def test_delete_question(self):
         """Testing Get Question method, this test should retreive all questions in db, if suceess it will return 200"""
-        res = self.client().delete('/questions/13')
+        res = self.client().delete('/questions/24')
 
         data = json.loads(res.data)
-        question = Question.query.filter(Question.id == 13).one_or_none()
+        question = Question.query.filter(Question.id == 24).one_or_none()
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['success'], True)
         self.assertTrue(data['deleted'])
@@ -141,6 +128,8 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_play(self):
+        """Testing Play quiz method, takes previous question and category , this test should check for previous questions and retrieve random it will return the question and success"""
+
         res = self.client().post('/quizzes?category=1', json=self.previous)
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 200)
@@ -182,7 +171,7 @@ class TriviaTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'],False)
         self.assertTrue(data['message'])
-    def test_404_create_question(self):
+    def test_422_create_question(self):
         """Testing create question with empty value of one of the keys, it should return 422"""
 
         res = self.client().post('/questions', json={"category":''})
