@@ -149,7 +149,7 @@ class TriviaTestCase(unittest.TestCase):
 
     def test_404_delete(self):
         """TEST case for 404 delete, if deletion is not sucessful it will retuen 404"""
-        res = self.client().delete('/questions/79oq8309903284kejflkj')
+        res = self.client().delete('/questions/79oq83kljljlk09903284kejflkj')
 
         data = json.loads(res.data)
         self.assertEqual(res.status_code, 404)
@@ -171,6 +171,8 @@ class TriviaTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'],False)
         self.assertTrue(data['message'])
+
+
     def test_422_create_question(self):
         """Testing create question with empty value of one of the keys, it should return 422"""
 
