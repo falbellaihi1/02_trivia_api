@@ -1,6 +1,6 @@
 # Trivia API 
 
-#INTRODUCTION 
+# INTRODUCTION 
 
 
 This udacity project Trivial API 
