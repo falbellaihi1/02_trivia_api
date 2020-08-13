@@ -1,5 +1,9 @@
 /venv/
-#virtual enviro/ packaging
+#pycharm
+.idea/
+
+
+#virtual enviro/ packaging (https://stackoverflow.com/a/36034268) 
 .Python
 build/
 develop-eggs/
@@ -15,5 +19,4 @@ var/
 .installed.cfg
 *.egg
 
-#pycharm
-.idea/
+
