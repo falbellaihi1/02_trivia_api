@@ -1,5 +1,12 @@
 # Trivia API 
 
+#INTRODUCTION 
+This udacity project Trivial API 
+Udacity is invested in creating bonding experiences for its employees and students. 
+A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game, 
+but their API experience is limited and still needs to be built out.
+
+
 ## Getting Started
 
 ### Installing Dependencies
@@ -30,20 +37,13 @@ This will install all of the required packages we selected within the `requireme
 
 - [Flask-CORS](https://flask-cors.readthedocs.io/en/latest/#) is the extension we'll use to handle cross origin requests from our frontend server. 
 
-#### Installing Node and NPM
-
-This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
-#### Installing project 
- run 
-
-```bash
-npm install
-```
 
 ## Database Setup
 With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
 ```bash
 psql trivia < trivia.psql
+
+
 ```
 
 ## Running the server
@@ -64,10 +64,9 @@ set FLASK_ENV=development
 flask run
 
 ```
-- navigate to project directory and to starter>frontend using CMD/BASH
-```
-npm start
-```
+
+
+
 
 Setting the `FLASK_ENV` variable to `development` will detect file changes and restart the server automatically.
 
@@ -84,6 +83,26 @@ psql trivia_test < trivia.psql
 python test_flaskr.py
 ```
 
+
+#### Installing Node and NPM
+
+This project depends on Nodejs and Node Package Manager (NPM). Before continuing, you must download and install Node (the download includes NPM) from [https://nodejs.com/en/download](https://nodejs.org/en/download/).
+#### Installing project 
+ run 
+
+```bash
+npm install
+```
+
+
+
+
+- navigate to project directory and to starter>frontend using CMD/BASH
+```
+npm start
+```
+
+
 -BASE URL 
     - Backend URL
     
@@ -95,11 +114,6 @@ python test_flaskr.py
         
         
 
-#INTRODUCTION 
-This udacity project Trivial API 
-Udacity is invested in creating bonding experiences for its employees and students. 
-A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game, 
-but their API experience is limited and still needs to be built out.
 
 
 
@@ -168,7 +182,6 @@ Returns
 
 
 
-REVIEW_COMMENT
 ```
 
 API DOCUMENTATION
