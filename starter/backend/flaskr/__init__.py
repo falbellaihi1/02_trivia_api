@@ -56,16 +56,19 @@ for all available categories. DONE***********
 
     @app.route('/categories', methods=['GET'])
     def get_categories():
+        try:
+            formatted_categories = {category.id: category.type for category in Category.query.all()}
+            if formatted_categories is None:
+                abort(404)  # next lesson to handle errors! TODO
+            else:
+                return jsonify({
+                    "success": True,
+                    "total_categories": len(formatted_categories),
+                    "categories": formatted_categories  # consider peaginment lesson flask part 2 DONE
+                })
+        except:
+            abort(404)
 
-        formatted_categories = {category.id: category.type for category in Category.query.all()}
-        if formatted_categories is None:
-            abort(402)  # next lesson to handle errors! TODO
-        else:
-            return jsonify({
-                "success": True,
-                "total_categories": len(formatted_categories),
-                "categories": formatted_categories  # consider peaginment lesson flask part 2
-            })
 
     '''
 @TODO: 
