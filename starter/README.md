@@ -1,6 +1,8 @@
 # Trivia API 
 
 #INTRODUCTION 
+
+
 This udacity project Trivial API 
 Udacity is invested in creating bonding experiences for its employees and students. 
 A bunch of team members got the idea to hold trivia on a regular basis and created a webpage to manage the trivia app and play the game, 
